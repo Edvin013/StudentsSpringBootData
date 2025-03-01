@@ -1,0 +1,156 @@
+### POST student
+POST localhost:8080/student
+content-type: application/json
+
+{
+  "fio": "Petr",
+  "age": 20,
+  "num": 1,
+  "salary": 3000
+}
+
+### POST student
+POST localhost:8080/student
+content-type: application/json
+
+{
+  "fio": "Ivan",
+  "age": 25,
+  "num": 3,
+  "salary": 3000
+}
+
+### POST student
+POST localhost:8080/student
+content-type: application/json
+
+{
+  "fio": "Misha",
+  "age": 40,
+  "num": 5,
+  "salary": 2000
+}
+
+### POST student incorrect
+POST localhost:8080/student
+content-type: application/json
+
+{
+  "fio": "Misha",
+  "age": "40",
+  "num": 5,
+  "salary": 2000
+}
+
+### GET all student
+GET localhost:8080/student
+
+### GET student by id
+GET localhost:8080/student/2
+
+### GET student by id incorrect
+GET localhost:8080/student/100
+
+### DELETE student by id
+DELETE localhost:8080/student/1
+
+### DELETE student by id
+DELETE localhost:8080/user/100
+
+### PUT student
+PUT localhost:8080/student
+content-type: application/json
+
+{
+  "id" : 2,
+  "fio": "Ivan",
+  "age": 50,
+  "num": 3,
+  "salary": 70000
+}
+
+### PUT student incorrect id
+PUT localhost:8080/user
+content-type: application/json
+
+{
+  "id" : 100,
+  "login" : "petr123",
+  "firstName" : "Petr",
+  "lastName" : "Petrov"
+}
+
+
+### POST auto
+POST localhost:8080/auto/2
+content-type: application/json
+
+{
+  "brand" : "KIA",
+  "power" : 190,
+  "year" : 2024
+}
+
+### POST auto
+POST localhost:8080/auto/2
+content-type: application/json
+
+{
+  "brand" : "BMW",
+  "power" : 240,
+  "year" : 2024
+}
+
+### POST auto incorrect constraint
+POST localhost:8080/auto/1
+content-type: application/json
+
+{
+  "brand" : "BMW",
+  "power" : "240",
+  "year" : 2024
+}
+
+### POST auto incorrect userId
+POST localhost:8080/auto/100
+content-type: application/json
+
+{
+  "brand" : "BMW",
+  "power" : 240,
+  "year" : 2024
+}
+
+### GET all auto
+GET localhost:8080/auto
+
+### GET auto by id
+GET localhost:8080/auto/1
+
+### GET auto by id incorrect
+GET localhost:8080/auto/100
+
+### PUT auto
+PUT localhost:8080/auto
+content-type: application/json
+
+{
+  "brand" : "BMW",
+  "power" : 300,
+  "year" : 2024
+}
+
+### DELETE auto by id
+DELETE localhost:8080/auto/1
+
+### DELETE tv by id incorrect
+DELETE localhost:8080/auto/100
+
+###
+POST http://localhost:8080/user
+content-type: application/json
+
+{
+  "userName": "Kirill",
+  "password": "123"
+}
